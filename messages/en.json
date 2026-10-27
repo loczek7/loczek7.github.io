@@ -15,5 +15,26 @@
   "common": {
     "downloadCv": "Download CV"
   },
-  "heroOpen": "Open to internships & jobs · Frontend / Fullstack"
+  "hero": {
+    "open": "Open to internships & jobs · Frontend / Fullstack",
+    "pre": "Hi there, I'm ",
+    "sub": "I build a bridge between modern frontend and a solid backend.",
+    "tagline": "Fullstack Developer · Student · Gdynia",
+    "ctaProjects": "Explore the project galaxy",
+    "ctaContact": "Contact me",
+    "photoAlt": "Marceli Duraziński — portrait against the sea and a lit bridge at dusk",
+    "cue": "Scroll"
+  },
+  "about": {
+    "kicker": "Transmission from the deck",
+    "title": "A few words about the pilot",
+    "p1": "Computer Science student at WSB Merito University in Gdańsk, 3rd year. I specialise in frontend, but I enjoy working across the whole stack — from the interface to the API and the database.",
+    "p2": "Main focus: Fullstack — React/Vue + Node.js. I'm looking for an internship or a job as a Frontend / Fullstack Developer.",
+    "cards": [
+      { "label": "Studies", "value": "Computer Science, WSB Merito Gdańsk" },
+      { "label": "Specialisation", "value": "Frontend Developer" },
+      { "label": "Current project", "value": "OTO OKO (engineering thesis)" },
+      { "label": "Location", "value": "Gdynia, Poland" }
+    ]
+  }
 }
