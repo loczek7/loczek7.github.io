@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Space_Grotesk, Unbounded } from "next/font/google";
 import { getMessages, hasLocale, locales } from "@/lib/i18n";
+import { Nav } from "@/components/nav/Nav";
 import "@/styles/tokens.css";
 import "@/styles/globals.css";
 
@@ -54,13 +55,20 @@ export default async function LocaleLayout({
 }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
   if (!hasLocale(locale)) notFound();
+  const t = getMessages(locale);
 
   return (
+    // data-scroll-behavior: Next disables smooth scrolling during route
+    // changes (e.g. the PL/ENG switch) but keeps it for in-page anchors.
     <html
       lang={locale}
+      data-scroll-behavior="smooth"
       className={`${spaceGrotesk.variable} ${unbounded.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Nav locale={locale} t={t.nav} downloadCv={t.common.downloadCv} />
+        {children}
+      </body>
     </html>
   );
 }

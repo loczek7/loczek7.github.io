@@ -3,5 +3,17 @@
     "title": "Portfolio Marceli Duraziński",
     "description": "Buduję pomost między nowoczesnym frontendem a solidnym zapleczem backendowym."
   },
+  "nav": {
+    "about": "O mnie",
+    "projects": "Galaktyka projektów",
+    "stack": "Technologie",
+    "contact": "Kontakt",
+    "cta": "Napisz do mnie",
+    "menuAria": "Menu",
+    "langLabel": "Język"
+  },
+  "common": {
+    "downloadCv": "Pobierz CV"
+  },
   "heroOpen": "Szukam stażu lub pracy · Frontend / Fullstack"
 }

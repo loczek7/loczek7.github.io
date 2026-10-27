@@ -3,5 +3,17 @@
     "title": "Marceli Duraziński · Portfolio",
     "description": "I build a bridge between modern frontend and a solid backend."
   },
+  "nav": {
+    "about": "About",
+    "projects": "Project galaxy",
+    "stack": "Tech stack",
+    "contact": "Contact",
+    "cta": "Get in touch",
+    "menuAria": "Menu",
+    "langLabel": "Language"
+  },
+  "common": {
+    "downloadCv": "Download CV"
+  },
   "heroOpen": "Open to internships & jobs · Frontend / Fullstack"
 }
