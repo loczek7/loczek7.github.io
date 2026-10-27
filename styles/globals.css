@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--bg-gradient);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section[id] {
+  scroll-margin-top: var(--nav-offset);
+}
+
+.display {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.glass {
+  background: linear-gradient(160deg, var(--glass-from), var(--glass-to));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--glass-radius);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass p {
+  color: var(--text-glass) !important;
+}
+
+.kicker {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
