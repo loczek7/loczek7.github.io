@@ -1,0 +1,62 @@
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+.p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #b5bbe6;
+}
+
+.cards {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardLabel {
+  font-size: 12px;
+}
+
+.cardValue {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

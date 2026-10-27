@@ -15,5 +15,26 @@
   "common": {
     "downloadCv": "Pobierz CV"
   },
-  "heroOpen": "Szukam stażu lub pracy · Frontend / Fullstack"
+  "hero": {
+    "open": "Szukam stażu lub pracy · Frontend / Fullstack",
+    "pre": "Cześć, jestem ",
+    "sub": "Buduję pomost między nowoczesnym frontendem a solidnym zapleczem backendowym.",
+    "tagline": "Fullstack Developer · Student · Gdynia",
+    "ctaProjects": "Odkryj galaktykę projektów",
+    "ctaContact": "Skontaktuj się",
+    "photoAlt": "Marceli Duraziński — portret na tle morza i oświetlonego mostu o zmierzchu",
+    "cue": "Przewiń"
+  },
+  "about": {
+    "kicker": "Transmisja z pokładu",
+    "title": "Kilka słów o pilocie",
+    "p1": "Student Informatyki na Uniwersytecie WSB Merito w Gdańsku, 3. rok. Specjalizuję się we frontendzie, ale lubię pracować na całym stosie — od interfejsu po API i bazę danych.",
+    "p2": "Główny fokus: Fullstack — React/Vue + Node.js. Szukam stażu lub pracy jako Frontend / Fullstack Developer.",
+    "cards": [
+      { "label": "Studia", "value": "Informatyka, WSB Merito Gdańsk" },
+      { "label": "Specjalność", "value": "Frontend Developer" },
+      { "label": "Aktualny projekt", "value": "OTO OKO (praca inżynierska)" },
+      { "label": "Lokalizacja", "value": "Gdynia, Polska" }
+    ]
+  }
 }
