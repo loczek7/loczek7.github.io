@@ -1,0 +1,53 @@
+/* Design tokens ported from docs/design/Main.dc.html. Palette: violet, blue, cyan only. */
+:root {
+  /* Accents (prototype props: accent, accent2) */
+  --accent: #6f4cff;
+  --accent2: #3de0ff;
+
+  /* Background intensity (prototype prop bgIntensity = 65%) */
+  --bgi: 0.65;
+
+  /* Base colors */
+  --bg: #05060f;
+  --text: #e8eaff;
+  --text-glass: #e2e5ff;
+  --text-nav: #c4c9f2;
+  --link: #7fe9ff;
+  --link-hover: #ffffff;
+  --border-soft: rgba(160, 170, 255, 0.12);
+
+  /* Matte glass */
+  --glass-from: rgba(30, 32, 74, 0.88);
+  --glass-to: rgba(11, 12, 32, 0.93);
+  --glass-border: rgba(160, 170, 255, 0.24);
+  --glass-radius: 24px;
+  --glass-blur: blur(22px) saturate(1.15);
+  --glass-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.7);
+  --text-shadow-readable: 0 1px 14px rgba(5, 6, 15, 0.8);
+
+  /* Page background: nebulae over near-black navy */
+  --bg-gradient:
+    radial-gradient(
+      1200px 700px at 80% 6%,
+      rgba(111, 76, 255, 0.24),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 8% 28%,
+      rgba(61, 224, 255, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 700px at 75% 72%,
+      rgba(45, 123, 255, 0.07),
+      transparent 60%
+    ),
+    var(--bg);
+
+  /* Fonts (CSS variables set by next/font in app/[locale]/layout.tsx) */
+  --font-body: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-heading: var(--font-unbounded), var(--font-space-grotesk), sans-serif;
+
+  /* Layout */
+  --nav-offset: 84px;
+}
