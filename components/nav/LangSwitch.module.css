@@ -1,0 +1,42 @@
+.lang {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 170, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: var(--text-nav);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.option:hover {
+  color: #ffffff;
+}
+
+.on {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .option {
+    min-width: 40px;
+    padding: 0 8px;
+  }
+}

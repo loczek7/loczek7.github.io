@@ -1,0 +1,8 @@
+# Keep LF in the working tree on every OS (matches Prettier and CI).
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.pdf binary
