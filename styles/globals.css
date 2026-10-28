@@ -20,6 +20,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Page wrapper (prototype: .root). `clip` instead of `hidden` so the sticky
+   nav still sticks to the viewport; the sky is taller than the page. */
+.root {
+  position: relative;
+  width: 100%;
+  overflow: clip;
+}
+
+/* Content above the cosmos and sky layers. */
+.content {
+  position: relative;
+  z-index: 2;
+}
+
 a {
   color: var(--link);
 }

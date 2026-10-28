@@ -1,0 +1,496 @@
+.cosmos {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--bgi, 0.8);
+}
+
+/* Nebulae and aurora (violet, blue, cyan only) */
+.nebs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.neb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.n1 {
+  left: -14%;
+  top: 2%;
+  width: 900px;
+  height: 720px;
+  background: radial-gradient(
+    closest-side,
+    rgba(111, 76, 255, 0.42),
+    rgba(111, 76, 255, 0)
+  );
+  animation: drift1 38s ease-in-out infinite alternate;
+}
+
+.n2 {
+  right: -14%;
+  top: 30%;
+  width: 820px;
+  height: 660px;
+  background: radial-gradient(
+    closest-side,
+    rgba(61, 224, 255, 0.2),
+    rgba(61, 224, 255, 0)
+  );
+  animation: drift2 46s ease-in-out infinite alternate;
+}
+
+.n3 {
+  left: 30%;
+  bottom: -24%;
+  width: 900px;
+  height: 560px;
+  background: radial-gradient(
+    closest-side,
+    rgba(60, 90, 255, 0.26),
+    rgba(60, 90, 255, 0)
+  );
+  animation: drift3 52s ease-in-out infinite alternate;
+}
+
+.aurora {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 320px;
+  filter: blur(46px);
+  mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    #000 40%,
+    #000 60%,
+    transparent
+  );
+  mask-image: linear-gradient(transparent, #000 40%, #000 60%, transparent);
+}
+
+.a1 {
+  top: 56%;
+  height: 260px;
+  background: linear-gradient(
+    90deg,
+    rgba(61, 224, 255, 0) 0%,
+    rgba(61, 224, 255, 0.26) 40%,
+    rgba(111, 76, 255, 0.3) 70%,
+    rgba(111, 76, 255, 0) 100%
+  );
+  transform: skewY(-9deg);
+  animation: aur1 16s ease-in-out infinite alternate;
+}
+
+.a2 {
+  top: 14%;
+  height: 200px;
+  background: linear-gradient(
+    90deg,
+    rgba(111, 76, 255, 0) 0%,
+    rgba(111, 76, 255, 0.22) 40%,
+    rgba(60, 90, 255, 0.2) 70%,
+    rgba(60, 90, 255, 0) 100%
+  );
+  transform: skewY(7deg);
+  animation: aur2 22s ease-in-out infinite alternate;
+}
+
+/* Parallax layers (scroll movement is added with the scroll animations) */
+.par {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+.far {
+  height: 160vh;
+}
+
+.mid {
+  height: 260vh;
+}
+
+.near {
+  height: 450vh;
+}
+
+.par .globe {
+  box-shadow: 0 0 40px rgba(120, 130, 255, 0.12);
+}
+
+.mid .globe {
+  filter: blur(0.8px) brightness(0.65);
+}
+
+.near .globe {
+  filter: blur(2px) brightness(0.55);
+}
+
+/* Textured, slowly rotating planet */
+.globe {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #101026;
+  box-shadow: 0 0 70px var(--glow, rgba(111, 76, 255, 0.35));
+}
+
+.globe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 28%,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0) 34%
+    ),
+    radial-gradient(
+      circle at 34% 32%,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 36%,
+      rgba(3, 4, 18, 0.55) 64%,
+      rgba(2, 3, 12, 0.95) 100%
+    );
+}
+
+.tex {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
+  animation: roll var(--roll, 90s) linear infinite;
+}
+
+.tx-gas {
+  background-image:
+    radial-gradient(
+      ellipse 16% 7% at 62% 63%,
+      rgba(190, 60, 40, 0.95),
+      rgba(190, 60, 40, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      #4a2e22 0%,
+      #b97a4c 10%,
+      #f0c996 20%,
+      #9a5a34 31%,
+      #e2aa72 42%,
+      #6e3f27 53%,
+      #d6a068 64%,
+      #f7dcae 74%,
+      #8f5232 86%,
+      #4a2e22 100%
+    );
+}
+
+.tx-ice {
+  background-image:
+    radial-gradient(
+      ellipse 20% 5% at 28% 38%,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0) 72%
+    ),
+    radial-gradient(
+      ellipse 22% 5% at 66% 58%,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      #0b2756,
+      #2766c4 18%,
+      #69b2fb 34%,
+      #2766c4 50%,
+      #17469a 68%,
+      #7ccffa 84%,
+      #0b2756
+    );
+}
+
+.tx-earth {
+  background-image:
+    radial-gradient(
+      ellipse 18% 12% at 30% 40%,
+      #5aa24a,
+      rgba(90, 162, 74, 0) 75%
+    ),
+    radial-gradient(
+      ellipse 14% 20% at 66% 52%,
+      #8c7a4a,
+      rgba(140, 122, 74, 0) 75%
+    ),
+    radial-gradient(
+      ellipse 22% 5% at 50% 28%,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0) 75%
+    ),
+    linear-gradient(180deg, #0e3a7a, #1a5fb4 50%, #0e3a7a);
+}
+
+.tx-violet {
+  background-image: linear-gradient(
+    180deg,
+    #2b1257,
+    #6a3fd1 16%,
+    #c58cff 28%,
+    #7d4bd9 40%,
+    #d654b4 52%,
+    #5a2da8 64%,
+    #e6a8ff 76%,
+    #6a3fd1 88%,
+    #2b1257
+  );
+}
+
+.tx-teal {
+  background-image:
+    radial-gradient(
+      ellipse 18% 6% at 36% 42%,
+      rgba(220, 255, 250, 0.4),
+      rgba(220, 255, 250, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      #06303a,
+      #117a86 18%,
+      #4fc3c0 32%,
+      #117a86 48%,
+      #0b5663 66%,
+      #68d8d0 82%,
+      #06303a
+    );
+}
+
+.tx-moon {
+  background-image:
+    radial-gradient(
+      circle at 25% 35%,
+      rgba(0, 0, 0, 0.28) 0,
+      rgba(0, 0, 0, 0.28) 9%,
+      rgba(0, 0, 0, 0) 10%
+    ),
+    radial-gradient(
+      circle at 60% 55%,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25) 12%,
+      rgba(0, 0, 0, 0) 13%
+    ),
+    radial-gradient(
+      circle at 78% 30%,
+      rgba(0, 0, 0, 0.22) 0,
+      rgba(0, 0, 0, 0.22) 6%,
+      rgba(0, 0, 0, 0) 7%
+    ),
+    linear-gradient(180deg, #8d90a3, #b9bccd 50%, #7f8296);
+}
+
+/* CSS-3D solar system */
+.scene3d {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  perspective: 1500px;
+}
+
+.cam {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: translate(34vw, 22vh) scale(0.9);
+}
+
+.solar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(66deg) rotateZ(-18deg);
+}
+
+.star3 {
+  position: absolute;
+  left: -40px;
+  top: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fff6d6, #ffc65c 50%, #ff7a2a);
+  box-shadow: 0 0 80px 24px rgba(255, 170, 70, 0.35);
+  transform: rotateX(-66deg) rotateZ(18deg);
+}
+
+.orb3 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(170, 180, 255, 0.28);
+  transform-style: preserve-3d;
+  animation: spin var(--p) linear infinite;
+}
+
+.o3a {
+  width: 520px;
+  height: 520px;
+  left: -260px;
+  top: -260px;
+  --p: 46s;
+}
+
+.o3b {
+  width: 860px;
+  height: 860px;
+  left: -430px;
+  top: -430px;
+  --p: 84s;
+}
+
+.o3c {
+  width: 1240px;
+  height: 1240px;
+  left: -620px;
+  top: -620px;
+  --p: 130s;
+}
+
+/* Counter-rotates so the planet keeps facing the camera. */
+.pl3 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  animation: face var(--p) linear infinite;
+}
+
+.ring3 {
+  position: absolute;
+  left: -112px;
+  top: -26px;
+  width: 224px;
+  height: 52px;
+  border-radius: 50%;
+  border: 6px solid rgba(240, 200, 150, 0.5);
+  transform: rotate(-18deg);
+}
+
+@keyframes drift1 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(18vw, 14vh) scale(1.25);
+  }
+}
+
+@keyframes drift2 {
+  from {
+    transform: translate(0, 0) scale(1.1);
+  }
+  to {
+    transform: translate(-20vw, -12vh) scale(0.9);
+  }
+}
+
+@keyframes drift3 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-16vw, -10vh) scale(1.2);
+  }
+}
+
+@keyframes aur1 {
+  from {
+    transform: skewY(-9deg) translateX(-6%) scaleY(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: skewY(-5deg) translateX(6%) scaleY(1.2);
+    opacity: 0.9;
+  }
+}
+
+@keyframes aur2 {
+  from {
+    transform: skewY(7deg) translateX(5%) scaleY(1.1);
+    opacity: 0.45;
+  }
+  to {
+    transform: skewY(3deg) translateX(-5%) scaleY(0.8);
+    opacity: 0.85;
+  }
+}
+
+@keyframes roll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes face {
+  from {
+    transform: rotateX(-66deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(-66deg) rotateZ(-360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .scene3d {
+    display: none;
+  }
+
+  .neb {
+    filter: blur(60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neb,
+  .aurora,
+  .tex,
+  .orb3,
+  .pl3,
+  .cam,
+  .par,
+  .nebs {
+    animation: none;
+  }
+}

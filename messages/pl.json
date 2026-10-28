@@ -230,5 +230,26 @@
     "kicker": "Układ technologii",
     "title": "Czym się posługuję",
     "tools": "Narzędzia i design"
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Wyślij sygnał w moją stronę",
+    "text": "Szukam stażu lub pracy jako Frontend / Fullstack Developer. Masz ofertę albo pomysł na projekt? Napisz — odezwę się najszybciej, jak się da.",
+    "formName": "Imię",
+    "formEmail": "E-mail",
+    "formMsg": "Wiadomość",
+    "formSend": "Wyślij wiadomość",
+    "formOk": "Sygnał wysłany! Odezwę się wkrótce.",
+    "formAgain": "Wyślij kolejną wiadomość"
+  },
+  "blackhole": {
+    "aria": "Koniec strony",
+    "kicker": "Koniec transmisji",
+    "title": "Dziękuję za lot",
+    "text": "Dotarłeś do horyzontu zdarzeń. Dalej jest już tylko kontakt ze mną.",
+    "back": "Wróć na orbitę"
+  },
+  "footer": {
+    "right": "Zbudowane w TypeScript, React i Next.js"
   }
 }
