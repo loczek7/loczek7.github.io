@@ -1,0 +1,83 @@
+.stack {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.group {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.groupTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 16px;
+  color: #f2f3ff;
+  border: 1px solid rgba(160, 170, 255, 0.34);
+  background: rgba(255, 255, 255, 0.08);
+  animation: float 6s ease-in-out infinite;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--accent2);
+  box-shadow: 0 0 24px -4px var(--accent2);
+}
+
+.d1 {
+  animation-delay: -1.5s;
+}
+
+.d2 {
+  animation-delay: -3s;
+}
+
+.d3 {
+  animation-delay: -4.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip {
+    animation: none;
+  }
+}

@@ -1,0 +1,12 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #ffffff;
+}

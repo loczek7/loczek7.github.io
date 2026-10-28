@@ -31,10 +31,85 @@
     "p1": "Student Informatyki na Uniwersytecie WSB Merito w Gdańsku, 3. rok. Specjalizuję się we frontendzie, ale lubię pracować na całym stosie — od interfejsu po API i bazę danych.",
     "p2": "Główny fokus: Fullstack — React/Vue + Node.js. Szukam stażu lub pracy jako Frontend / Fullstack Developer.",
     "cards": [
-      { "label": "Studia", "value": "Informatyka, WSB Merito Gdańsk" },
-      { "label": "Specjalność", "value": "Frontend Developer" },
-      { "label": "Aktualny projekt", "value": "OTO OKO (praca inżynierska)" },
-      { "label": "Lokalizacja", "value": "Gdynia, Polska" }
+      {
+        "label": "Studia",
+        "value": "Informatyka, WSB Merito Gdańsk"
+      },
+      {
+        "label": "Specjalność",
+        "value": "Frontend Developer / Fullstack Developer"
+      },
+      {
+        "label": "Aktualny projekt",
+        "value": "OTO OKO (praca inżynierska)"
+      },
+      {
+        "label": "Lokalizacja",
+        "value": "Gdynia, Polska"
+      }
     ]
+  },
+  "offer": {
+    "kicker": "Czym mogę pomóc",
+    "title": "Co mogę dla Ciebie zrobić",
+    "items": [
+      {
+        "title": "Frontend",
+        "text": "Interfejsy w React i Next.js (oraz Vue i Nuxt) w TypeScript: responsywne, dopracowane i z przemyślanymi animacjami."
+      },
+      {
+        "title": "Backend",
+        "text": "REST API w Node.js, baza PostgreSQL lub Supabase, walidacja danych i logika po stronie serwera, tak jak w OTO OKO."
+      },
+      {
+        "title": "Mobile",
+        "text": "Aplikacje w React Native i Expo, które działają offline: lokalna baza SQLite, kolejka wiadomości i synchronizacja, tak jak w Backstage."
+      },
+      {
+        "title": "Praca w zespole",
+        "text": "Pracuję w zespołach czteroosobowych: Git, code review i czysta architektura. W Backstage prowadzę zespół i dbam o testy."
+      }
+    ]
+  },
+  "timeline": {
+    "kicker": "Trasa lotu",
+    "title": "Dotychczasowa misja",
+    "items": [
+      {
+        "year": "2023",
+        "title": "Start studiów",
+        "text": "Informatyka na Uniwersytecie WSB Merito w Gdańsku."
+      },
+      {
+        "year": "2025",
+        "title": "Wirtualna Polska",
+        "text": "Projekt zespołowy: odwzorowanie portalu informacyjnego w Nuxt.js i Vue."
+      },
+      {
+        "year": "Początek 2026",
+        "title": "OTO OKO",
+        "text": "Praca inżynierska w 4-osobowym zespole: system rezerwacji, backend w Supabase."
+      },
+      {
+        "year": "09.2026",
+        "title": "AXEL",
+        "text": "Własny projekt: lokalny, wieloagentowy asystent do pisania kodu."
+      },
+      {
+        "year": "20.10.2026",
+        "title": "Backstage",
+        "text": "Start projektu zespołowego: festiwalowy towarzysz offline-first w React Native."
+      },
+      {
+        "year": "Dziś",
+        "title": "Następny krok",
+        "text": "3. rok studiów, szukam stażu lub pracy jako Frontend / Fullstack Developer."
+      }
+    ]
+  },
+  "stack": {
+    "kicker": "Układ technologii",
+    "title": "Czym się posługuję",
+    "tools": "Narzędzia i design"
   }
 }
