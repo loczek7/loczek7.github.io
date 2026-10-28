@@ -45,3 +45,26 @@
     animation: none;
   }
 }
+
+/* The sky drifts up slightly while scrolling (prototype: skyshift). */
+@keyframes skyshift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5%);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .sky {
+    animation: skyshift linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky {
+    animation: none !important;
+  }
+}

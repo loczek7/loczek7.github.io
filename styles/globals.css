@@ -7,6 +7,13 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  /* No native scrollbar (owner's request); the page still scrolls and the
+     rocket progress bar at the top shows the position. */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {

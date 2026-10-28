@@ -6,8 +6,12 @@ import { Nav } from "@/components/nav/Nav";
 import { Cosmos } from "@/components/cosmos/Cosmos";
 import { Sky } from "@/components/cosmos/Sky";
 import { Footer } from "@/components/footer/Footer";
+import { ScrollProgress } from "@/components/motion/ScrollProgress";
+import { CursorTrail } from "@/components/motion/CursorTrail";
+import { RevealFallback } from "@/components/motion/RevealFallback";
 import "@/styles/tokens.css";
 import "@/styles/globals.css";
+import "@/styles/motion.css";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -73,6 +77,9 @@ export default async function LocaleLayout({
           <Cosmos />
           <Sky />
           <div className="content">
+            <ScrollProgress />
+            <CursorTrail />
+            <RevealFallback />
             <Nav locale={locale} t={t.nav} downloadCv={t.common.downloadCv} />
             {children}
             <Footer right={t.footer.right} />
