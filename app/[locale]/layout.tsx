@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { Space_Grotesk, Unbounded } from "next/font/google";
 import { getMessages, hasLocale, locales } from "@/lib/i18n";
 import { Nav } from "@/components/nav/Nav";
+import { Cosmos } from "@/components/cosmos/Cosmos";
+import { Sky } from "@/components/cosmos/Sky";
+import { Footer } from "@/components/footer/Footer";
 import "@/styles/tokens.css";
 import "@/styles/globals.css";
 
@@ -66,8 +69,15 @@ export default async function LocaleLayout({
       className={`${spaceGrotesk.variable} ${unbounded.variable}`}
     >
       <body>
-        <Nav locale={locale} t={t.nav} downloadCv={t.common.downloadCv} />
-        {children}
+        <div className="root">
+          <Cosmos />
+          <Sky />
+          <div className="content">
+            <Nav locale={locale} t={t.nav} downloadCv={t.common.downloadCv} />
+            {children}
+            <Footer right={t.footer.right} />
+          </div>
+        </div>
       </body>
     </html>
   );

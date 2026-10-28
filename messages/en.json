@@ -230,5 +230,26 @@
     "kicker": "Technology system",
     "title": "What I work with",
     "tools": "Tools & design"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Send a signal my way",
+    "text": "I'm looking for an internship or a job as a Frontend / Fullstack Developer. Got an offer or a project idea? Drop me a line — I'll get back to you as soon as I can.",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMsg": "Message",
+    "formSend": "Send message",
+    "formOk": "Signal sent! I'll get back to you soon.",
+    "formAgain": "Send another message"
+  },
+  "blackhole": {
+    "aria": "End of page",
+    "kicker": "End of transmission",
+    "title": "Thanks for flying",
+    "text": "You've reached the event horizon. Past this point, there's only getting in touch with me.",
+    "back": "Back to orbit"
+  },
+  "footer": {
+    "right": "Built with TypeScript, React and Next.js"
   }
 }
