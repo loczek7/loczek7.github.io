@@ -505,3 +505,63 @@
     animation: none;
   }
 }
+
+/* Scroll-driven motion. The 3D scene does its own parallax and fade; these
+   cover the nebulae and the CSS fallback (prototype: parmove, camfly,
+   cosfade). */
+@keyframes parmove {
+  to {
+    transform: translateY(calc(-100% + 100vh));
+  }
+}
+
+@keyframes camfly {
+  0% {
+    transform: translate(34vw, 22vh) scale(0.9);
+  }
+  50% {
+    transform: translate(-8vw, -6vh) scale(1.12);
+  }
+  100% {
+    transform: translate(-30vw, 14vh) scale(1.5);
+  }
+}
+
+/* Relative to .cosmos, which already has opacity: var(--bgi). */
+@keyframes fadeout {
+  0%,
+  72% {
+    opacity: 1;
+  }
+  96%,
+  100% {
+    opacity: 0.06;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .par {
+    animation: parmove linear both;
+    animation-timeline: scroll(root);
+  }
+
+  .cam {
+    animation: camfly linear both;
+    animation-timeline: scroll(root);
+  }
+
+  .nebs,
+  .flat {
+    animation: fadeout linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .par,
+  .cam,
+  .nebs,
+  .flat {
+    animation: none !important;
+  }
+}
