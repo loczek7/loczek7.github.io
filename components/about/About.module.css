@@ -60,3 +60,23 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Beyond the prototype: keep the two card columns on phones, with less
+   padding and tighter kicker spacing so labels like "SPECJALNOŚĆ" fit. */
+@media (max-width: 600px) {
+  .title {
+    font-size: clamp(28px, 8.4vw, 44px);
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .cardLabel {
+    letter-spacing: 0.14em;
+  }
+
+  .cardValue {
+    font-size: 16px;
+  }
+}

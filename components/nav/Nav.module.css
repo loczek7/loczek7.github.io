@@ -170,6 +170,27 @@
   .inner {
     gap: 10px;
   }
+
+  /* Beyond the prototype: on phones the name, the PL/ENG switch and the
+     burger do not fit in one line, so the name breaks into two. */
+  .logo {
+    gap: 10px;
+  }
+
+  .logoSun {
+    flex: none;
+    width: 24px;
+    height: 24px;
+  }
+
+  .logoText {
+    max-width: 7em;
+    line-height: 1.1;
+  }
+
+  .actions {
+    gap: 10px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -76,3 +76,20 @@
     gap: 32px;
   }
 }
+
+/* Beyond the prototype: the 64px/48px padding leaves the form too narrow on
+   phones. */
+@media (max-width: 600px) {
+  .card {
+    padding: 36px 20px;
+    border-radius: 24px;
+  }
+
+  .card .formBox {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: clamp(28px, 8.4vw, 44px);
+  }
+}

@@ -318,9 +318,11 @@
     padding-bottom: 64px;
   }
 
+  /* Stays round when the screen is narrower than 340px. */
   .orb {
-    width: 340px;
-    height: 340px;
+    width: min(340px, 100%);
+    height: auto;
+    aspect-ratio: 1;
   }
 
   .photo {

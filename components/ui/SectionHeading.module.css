@@ -23,3 +23,11 @@
   line-height: 1.6;
   color: #b5bbe6;
 }
+
+/* Beyond the prototype: 44px headings overflow on phones (e.g.
+   "Dotychczasowa"), so they scale with the screen below 600px. */
+@media (max-width: 600px) {
+  .title {
+    font-size: clamp(28px, 8.4vw, 44px);
+  }
+}

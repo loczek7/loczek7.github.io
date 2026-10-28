@@ -98,3 +98,11 @@ h3,
 p {
   text-shadow: var(--text-shadow-readable);
 }
+
+/* Safety net for very narrow screens: a word longer than the line breaks
+   instead of pushing the page sideways. */
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
