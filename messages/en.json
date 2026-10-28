@@ -31,10 +31,85 @@
     "p1": "Computer Science student at WSB Merito University in Gdańsk, 3rd year. I specialise in frontend, but I enjoy working across the whole stack — from the interface to the API and the database.",
     "p2": "Main focus: Fullstack — React/Vue + Node.js. I'm looking for an internship or a job as a Frontend / Fullstack Developer.",
     "cards": [
-      { "label": "Studies", "value": "Computer Science, WSB Merito Gdańsk" },
-      { "label": "Specialisation", "value": "Frontend Developer" },
-      { "label": "Current project", "value": "OTO OKO (engineering thesis)" },
-      { "label": "Location", "value": "Gdynia, Poland" }
+      {
+        "label": "Studies",
+        "value": "Computer Science, WSB Merito Gdańsk"
+      },
+      {
+        "label": "Specialisation",
+        "value": "Frontend Developer / Fullstack Developer"
+      },
+      {
+        "label": "Current project",
+        "value": "OTO OKO (engineering thesis)"
+      },
+      {
+        "label": "Location",
+        "value": "Gdynia, Poland"
+      }
     ]
+  },
+  "offer": {
+    "kicker": "How I can help",
+    "title": "What I can do for you",
+    "items": [
+      {
+        "title": "Frontend",
+        "text": "Interfaces in React and Next.js (and Vue and Nuxt) with TypeScript: responsive, polished and with well-considered animations."
+      },
+      {
+        "title": "Backend",
+        "text": "REST APIs in Node.js, PostgreSQL or Supabase, data validation and server-side logic, as in OTO OKO."
+      },
+      {
+        "title": "Mobile",
+        "text": "React Native and Expo apps that work offline: a local SQLite database, a message queue and sync, as in Backstage."
+      },
+      {
+        "title": "Teamwork",
+        "text": "I work in teams of four: Git, code review and clean architecture. In Backstage I lead the team and look after testing."
+      }
+    ]
+  },
+  "timeline": {
+    "kicker": "Flight path",
+    "title": "Mission so far",
+    "items": [
+      {
+        "year": "2023",
+        "title": "Studies begin",
+        "text": "Computer Science at WSB Merito University in Gdańsk."
+      },
+      {
+        "year": "2025",
+        "title": "Wirtualna Polska",
+        "text": "Team project: a recreation of a news portal in Nuxt.js and Vue."
+      },
+      {
+        "year": "Early 2026",
+        "title": "OTO OKO",
+        "text": "Engineering thesis in a 4-person team: booking system, Supabase backend."
+      },
+      {
+        "year": "09.2026",
+        "title": "AXEL",
+        "text": "Personal project: a local, multi-agent coding assistant."
+      },
+      {
+        "year": "20.10.2026",
+        "title": "Backstage",
+        "text": "Kick-off of the team project: an offline-first festival companion built with React Native."
+      },
+      {
+        "year": "Today",
+        "title": "Next step",
+        "text": "3rd year of studies, looking for an internship or a job as a Frontend / Fullstack Developer."
+      }
+    ]
+  },
+  "stack": {
+    "kicker": "Technology system",
+    "title": "What I work with",
+    "tools": "Tools & design"
   }
 }

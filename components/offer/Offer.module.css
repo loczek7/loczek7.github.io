@@ -1,0 +1,54 @@
+.offer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff, var(--dot-color) 70%);
+  box-shadow: 0 0 18px 2px var(--dot-color);
+}
+
+.violet {
+  --dot-color: var(--accent);
+}
+
+.cyan {
+  --dot-color: var(--accent2);
+}
+
+.green {
+  --dot-color: #22c594;
+}
+
+.pink {
+  --dot-color: #d654b4;
+}
+
+.title {
+  margin: 0;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.text {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
