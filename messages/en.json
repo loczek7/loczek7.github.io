@@ -107,6 +107,125 @@
       }
     ]
   },
+  "galaxy": {
+    "kicker": "Project galaxy",
+    "title": "One planet, one project",
+    "sub": "Hover over a planet to zoom in. Every world has its own stack and story.",
+    "sunAria": "Click the sun",
+    "sunTip": "Houston, we have contact! Thanks for stopping by.",
+    "details": "Details",
+    "close": "Close",
+    "dlgRole": "My role",
+    "dlgFeatures": "What it includes",
+    "dlgChallenge": "Challenge and solution",
+    "dlgChallengePh": "[ADD: the hardest technical problem and how you solved it]",
+    "projects": {
+      "axel": {
+        "planet": "Planet 01",
+        "name": "AXEL",
+        "desc": "A local, multi-agent coding assistant — runs entirely on your own hardware, with no external model APIs.",
+        "shotLabel": "AXEL",
+        "shotAlt": "AXEL home screen with the conversation list, the assistant orb and the message box",
+        "repoLabel": "Repository",
+        "kicker": "Planet 01 · personal project",
+        "alt": "AXEL home screen",
+        "summary": "A local, multi-agent coding assistant. It runs entirely on my own hardware, with no external model APIs.",
+        "role": "Project author: idea, architecture and implementation.",
+        "features": [
+          "Assistant chat, conversation list and history",
+          "Multi-agent orchestrator with live status",
+          "Hardware monitor: GPU VRAM usage",
+          "Dashboard, code sandbox, terminal and plugins",
+          "Quick actions: code, questions, web, mail, git and screenshot",
+          "Voice input and image attachments",
+          "Models run locally through Ollama, everything in Docker"
+        ]
+      },
+      "oto": {
+        "planet": "Planet 02",
+        "name": "OTO OKO",
+        "desc": "A booking app for an optician's salon — engineering thesis, 4-person team. I'm responsible for the backend: Supabase, REST API, notifications.",
+        "shotLabel": "OTO OKO",
+        "shotAlt": "Home page of the OTO OKO optician salon with the headline \"Your eyes deserve the best\"",
+        "repoLabel": "Repository",
+        "kicker": "Planet 02 · engineering thesis, team of 4",
+        "alt": "Home page of the OTO OKO optician salon",
+        "summary": "A booking app for the OTOOKO optician's salon, with a site presenting the salon and online appointment booking.",
+        "role": "I'm responsible for the backend: Supabase, REST API and notifications.",
+        "features": [
+          "Online appointment booking from the salon's site",
+          "User accounts and sign-in",
+          "Backend on Supabase and a REST API",
+          "Appointment-related notifications",
+          "Data validation with Zod schemas",
+          "Salon site: about, services, news, gallery, contact"
+        ]
+      },
+      "bs": {
+        "planet": "Planet 03 · team project",
+        "name": "Backstage",
+        "desc": "An offline-first festival companion for all the festival fanatics: the map, schedule and crew messages work without a signal.",
+        "shotLabel": "Backstage",
+        "shotAlt": "",
+        "shotTagline": "offline-first · for festival fanatics",
+        "repoLabel": "Repository",
+        "kicker": "Planet 03 · team project, 4 people",
+        "alt": "",
+        "summary": "An offline-first festival companion for all the festival fanatics. The demo runs on a fictional event in Gdańsk, \"Stocznia Sound 2027\", with data from the CKAN and TRISTAR APIs.",
+        "role": "Team lead and Domain & QA Lead: domain model, business rules, use cases, DI, tests and architecture review.",
+        "features": [
+          "Offline sign-in",
+          "Download the event pack to the device",
+          "Offline map (Leaflet in a WebView)",
+          "Festival schedule",
+          "\"Leave now\" feature",
+          "A compass pointing the way back to your tent",
+          "Crew messages with an Outbox queue, even without a signal",
+          "Event check-in",
+          "Getting home by public transport",
+          "Connection status bar",
+          "Badges: Prepared, Night Owl, All 3 Days, Three Stages"
+        ]
+      },
+      "wp": {
+        "planet": "Planet 04 · team project",
+        "name": "Wirtualna Polska",
+        "desc": "A recreation of a news portal — course project. I'm responsible for the functionality (weather widget, search) and part of the UI.",
+        "shotLabel": "Wirtualna Polska",
+        "shotAlt": "Home page of the Wirtualna Polska news portal with articles from sport, science, business and tech",
+        "repoLabel": "Repository",
+        "kicker": "Planet 04 · team project",
+        "alt": "Home page of the Wirtualna Polska news portal",
+        "summary": "A recreation of a news portal as a course project.",
+        "role": "I'm responsible for the functionality (weather widget, search) and part of the UI.",
+        "features": [
+          "Weather widget in the header",
+          "News search",
+          "Navigation by section: news, sport, business, tech, motoring and more",
+          "Main articles section with categories",
+          "Ad slots in the portal layout"
+        ]
+      },
+      "port": {
+        "planet": "Planet 05 · in progress",
+        "name": "This portfolio",
+        "desc": "The site you're on right now — a cosmic design built with Next.js and TypeScript.",
+        "shotLabel": "screenshot placeholder",
+        "shotAlt": "Hero section of this portfolio with a portrait in a space scene",
+        "repoLabel": "View repo",
+        "kicker": "Planet 05 · in progress",
+        "alt": "Portfolio hero section with a portrait in a space scene",
+        "summary": "The site you're on right now — a cosmic design built with Next.js and TypeScript.",
+        "role": "Concept, design and implementation.",
+        "features": [
+          "Cosmic design: project galaxy and scroll animations",
+          "Two languages: PL and ENG",
+          "Contact form",
+          "Responsive layout with a mobile menu"
+        ]
+      }
+    }
+  },
   "stack": {
     "kicker": "Technology system",
     "title": "What I work with",

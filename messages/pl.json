@@ -107,6 +107,125 @@
       }
     ]
   },
+  "galaxy": {
+    "kicker": "Galaktyka projektów",
+    "title": "Jedna planeta, jeden projekt",
+    "sub": "Najechaj na planetę, żeby ją przybliżyć. Każdy świat ma własny stack i historię.",
+    "sunAria": "Kliknij słońce",
+    "sunTip": "Houston, mamy połączenie! Dzięki, że zaglądasz.",
+    "details": "Szczegóły",
+    "close": "Zamknij",
+    "dlgRole": "Moja rola",
+    "dlgFeatures": "Co zawiera",
+    "dlgChallenge": "Wyzwanie i rozwiązanie",
+    "dlgChallengePh": "[DOPISZ: najtrudniejszy problem techniczny i jak go rozwiązałeś]",
+    "projects": {
+      "axel": {
+        "planet": "Planeta 01",
+        "name": "AXEL",
+        "desc": "Lokalny, wieloagentowy asystent do pisania kodu — działa w całości na własnym sprzęcie, bez zewnętrznych API modeli.",
+        "shotLabel": "AXEL",
+        "shotAlt": "Ekran główny aplikacji AXEL z listą rozmów, kulą asystenta i polem wiadomości",
+        "repoLabel": "Repozytorium",
+        "kicker": "Planeta 01 · projekt własny",
+        "alt": "Ekran główny aplikacji AXEL",
+        "summary": "Lokalny, wieloagentowy asystent do pisania kodu. Działa w całości na moim sprzęcie, bez zewnętrznych API modeli.",
+        "role": "Autor projektu: pomysł, architektura i implementacja.",
+        "features": [
+          "Czat z asystentem, lista rozmów i historia",
+          "Orkiestrator wielu agentów ze statusem na żywo",
+          "Monitor sprzętu: zużycie pamięci VRAM karty graficznej",
+          "Dashboard, piaskownica kodu, terminal i wtyczki",
+          "Szybkie akcje: kod, pytania, web, mail, git i zrzut ekranu",
+          "Wejście głosowe i załączanie obrazów",
+          "Modele uruchamiane lokalnie przez Ollama, całość w Dockerze"
+        ]
+      },
+      "oto": {
+        "planet": "Planeta 02",
+        "name": "OTO OKO",
+        "desc": "Aplikacja rezerwacyjna dla salonu optycznego — praca inżynierska, zespół 4-osobowy. Odpowiadam za backend: Supabase, REST API, powiadomienia.",
+        "shotLabel": "OTO OKO",
+        "shotAlt": "Strona główna salonu optycznego OTO OKO z hasłem „Twoje oczy zasługują na najlepsze”",
+        "repoLabel": "Repozytorium",
+        "kicker": "Planeta 02 · praca inżynierska, zespół 4 osób",
+        "alt": "Strona główna salonu optycznego OTO OKO",
+        "summary": "Aplikacja do rezerwacji wizyt w salonie optycznym OTOOKO, ze stroną prezentującą salon i możliwością umówienia wizyty online.",
+        "role": "Odpowiadam za backend: Supabase, REST API i powiadomienia.",
+        "features": [
+          "Rezerwacja wizyt online ze strony salonu",
+          "Konta użytkowników i logowanie",
+          "Backend na Supabase i REST API",
+          "Powiadomienia związane z wizytami",
+          "Walidacja danych schematami Zod",
+          "Strona salonu: o nas, usługi, aktualności, galeria, kontakt"
+        ]
+      },
+      "bs": {
+        "planet": "Planeta 03 · projekt zespołowy",
+        "name": "Backstage",
+        "desc": "Festiwalowy towarzysz offline-first dla wszystkich festiwalowych świrów: mapa, plan i wiadomości ekipy działają bez zasięgu.",
+        "shotLabel": "Backstage",
+        "shotAlt": "",
+        "shotTagline": "offline-first · dla festiwalowych świrów",
+        "repoLabel": "Repozytorium",
+        "kicker": "Planeta 03 · projekt zespołowy, 4 osoby",
+        "alt": "",
+        "summary": "Festiwalowy towarzysz offline-first dla wszystkich festiwalowych świrów. Demo działa na fikcyjnym evencie w Gdańsku „Stocznia Sound 2027”, z danymi z API CKAN i TRISTAR.",
+        "role": "Lider zespołu i Domain & QA Lead: domena, reguły biznesowe, use case'y, DI, testy oraz review architektury.",
+        "features": [
+          "Logowanie offline",
+          "Pobranie paczki eventu na urządzenie",
+          "Mapa offline (Leaflet w WebView)",
+          "Plan festiwalu",
+          "Funkcja „Wyjdź teraz”",
+          "Kompas wskazujący drogę do namiotu",
+          "Wiadomości ekipy z kolejką Outbox, także bez zasięgu",
+          "Check-in na wydarzeniu",
+          "Powrót komunikacją miejską",
+          "Pasek stanu połączenia",
+          "Odznaki: Przygotowany, Nocny marek, Wszystkie 3 dni, Trzy sceny"
+        ]
+      },
+      "wp": {
+        "planet": "Planeta 04 · projekt zespołowy",
+        "name": "Wirtualna Polska",
+        "desc": "Odwzorowanie portalu informacyjnego — projekt zaliczeniowy. Odpowiadam za funkcjonalność (widget pogody, wyszukiwarka) i część UI.",
+        "shotLabel": "Wirtualna Polska",
+        "shotAlt": "Strona główna portalu Wirtualna Polska z artykułami z działów sport, nauka, biznes i tech",
+        "repoLabel": "Repozytorium",
+        "kicker": "Planeta 04 · projekt zespołowy",
+        "alt": "Strona główna portalu Wirtualna Polska",
+        "summary": "Odwzorowanie portalu informacyjnego jako projekt zaliczeniowy na studiach.",
+        "role": "Odpowiadam za funkcjonalność (widżet pogody, wyszukiwarka) i część interfejsu.",
+        "features": [
+          "Widżet pogody w nagłówku",
+          "Wyszukiwarka wiadomości",
+          "Nawigacja po działach: wiadomości, sport, biznes, tech, motoryzacja i inne",
+          "Sekcja głównych artykułów z kategoriami",
+          "Miejsca na reklamy w układzie portalu"
+        ]
+      },
+      "port": {
+        "planet": "Planeta 05 · w budowie",
+        "name": "To portfolio",
+        "desc": "Strona, na której właśnie jesteś — kosmiczny design zbudowany w Next.js i TypeScript.",
+        "shotLabel": "miejsce na screenshot",
+        "shotAlt": "Sekcja hero tego portfolio z portretem w kosmicznej scenerii",
+        "repoLabel": "Zobacz repo",
+        "kicker": "Planeta 05 · w budowie",
+        "alt": "Sekcja hero portfolio z portretem w kosmicznej scenerii",
+        "summary": "Strona, na której właśnie jesteś — kosmiczny design zbudowany w Next.js i TypeScript.",
+        "role": "Projekt, design i implementacja.",
+        "features": [
+          "Kosmiczny design: galaktyka projektów i animacje przy przewijaniu",
+          "Dwie wersje językowe: PL i ENG",
+          "Formularz kontaktowy",
+          "Responsywny układ z menu mobilnym"
+        ]
+      }
+    }
+  },
   "stack": {
     "kicker": "Układ technologii",
     "title": "Czym się posługuję",

@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/about/About";
 import { Offer } from "@/components/offer/Offer";
 import { Timeline } from "@/components/timeline/Timeline";
+import { Galaxy } from "@/components/galaxy/Galaxy";
 import { Stack } from "@/components/stack/Stack";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
@@ -18,7 +19,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <About t={t.about} />
       <Offer t={t.offer} />
       <Timeline t={t.timeline} />
-      {/* TODO(phase 1, step 4): project galaxy (#projects) goes here. */}
+      <Galaxy t={t.galaxy} />
       <Stack t={t.stack} />
     </main>
   );

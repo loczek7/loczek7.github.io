@@ -1,0 +1,81 @@
+/* Prototype: .modal (overlay) + .dialog (box). With <dialog>, the overlay
+   is ::backdrop and the element itself is the box. */
+.modal {
+  width: calc(100% - 48px);
+  max-width: 960px;
+  max-height: 88vh;
+  padding: 0;
+  border: 1px solid rgba(160, 170, 255, 0.28);
+  border-radius: 28px;
+  background: linear-gradient(
+    160deg,
+    rgba(24, 26, 64, 0.97),
+    rgba(8, 9, 24, 0.99)
+  );
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.8);
+  color: var(--text);
+  overflow: auto;
+}
+
+.modal[open] {
+  animation: modalIn 0.25s ease both;
+}
+
+.modal::backdrop {
+  background: rgba(3, 4, 12, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dialog {
+  position: relative;
+  padding: 36px;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(160, 170, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.close:hover {
+  border-color: var(--accent2);
+  background: rgba(61, 224, 255, 0.1);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .dialog {
+    padding: 56px 20px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal[open] {
+    animation: none;
+  }
+}

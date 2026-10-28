@@ -1,0 +1,541 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px 40px;
+}
+
+/* Stage: sun and orbits in the middle, planets in two flowing columns.
+   Columns (not absolute positions) so cards never overlap. */
+.stage {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 1100px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 320px;
+}
+
+.right {
+  margin-top: 170px;
+}
+
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 1px dashed rgba(160, 170, 255, 0.2);
+  animation: spin 120s linear infinite;
+}
+
+.orbit i {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: #cfd3ff;
+  box-shadow: 0 0 10px #cfd3ff;
+}
+
+.o1 {
+  width: 480px;
+  height: 480px;
+  margin: -240px 0 0 -240px;
+}
+
+.o2 {
+  width: 800px;
+  height: 800px;
+  margin: -400px 0 0 -400px;
+  animation-direction: reverse;
+  animation-duration: 180s;
+}
+
+.o3 {
+  width: 1120px;
+  height: 1120px;
+  margin: -560px 0 0 -560px;
+  animation-duration: 240s;
+}
+
+/* Planet card */
+.planet {
+  position: relative;
+  width: 320px;
+}
+
+.sphereBox {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 34px auto 20px;
+}
+
+.moonOrbit {
+  position: absolute;
+  inset: -34px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  animation: spin 18s linear infinite;
+}
+
+.moonOrbit i {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--accent2);
+  box-shadow: 0 0 12px var(--accent2);
+}
+
+.sphere {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.5s ease;
+  animation: float 8s ease-in-out infinite;
+}
+
+.planet:hover .sphere {
+  transform: scale(1.1);
+}
+
+/* 01 AXEL: violet gas giant with bands and a ring */
+.s-axel {
+  background: radial-gradient(
+    circle at 32% 28%,
+    #c9bcff,
+    #6f4cff 45%,
+    #1b0f5c 100%
+  );
+  box-shadow:
+    0 0 70px rgba(111, 76, 255, 0.6),
+    inset -20px -24px 42px rgba(0, 0, 25, 0.6);
+}
+
+.s-axel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-linear-gradient(
+    8deg,
+    rgba(255, 255, 255, 0) 0 11px,
+    rgba(214, 200, 255, 0.2) 12px 16px,
+    rgba(20, 8, 70, 0.22) 17px 21px
+  );
+}
+
+.ringed::after {
+  content: "";
+  position: absolute;
+  left: -32%;
+  right: -32%;
+  top: 41%;
+  height: 18%;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  transform: rotate(-18deg);
+}
+
+/* 02 OTO OKO: cyan eye planet with iris and pupil */
+.s-oto {
+  background: radial-gradient(
+    circle at 32% 28%,
+    #c4f8ff,
+    #19b6d6 45%,
+    #062c47 100%
+  );
+  box-shadow:
+    0 0 70px rgba(25, 182, 214, 0.5),
+    inset -20px -24px 42px rgba(0, 0, 25, 0.6);
+}
+
+.s-oto::before {
+  content: "";
+  position: absolute;
+  inset: 28%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.38);
+  box-shadow: inset 0 0 0 12px rgba(255, 255, 255, 0.07);
+}
+
+.s-oto::after {
+  content: "";
+  position: absolute;
+  left: 41%;
+  top: 41%;
+  width: 18%;
+  height: 18%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #bff6ff 0 12%, #021426 14%);
+  box-shadow: 0 0 14px 2px rgba(140, 240, 255, 0.55);
+}
+
+/* 03 Backstage: green/teal planet with sound waves and a neon line */
+.s-bs {
+  background: radial-gradient(
+    circle at 32% 28%,
+    #d2ffe9,
+    #22c594 45%,
+    #04352b 100%
+  );
+  box-shadow:
+    0 0 70px rgba(34, 197, 148, 0.45),
+    inset -20px -24px 42px rgba(0, 25, 15, 0.6);
+}
+
+.s-bs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0) 0 8px,
+    rgba(210, 255, 233, 0.3) 9px 10px
+  );
+}
+
+.s-bs::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: calc(50% - 1px);
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(125, 255, 196, 0.9),
+    transparent
+  );
+  transform: rotate(-24deg);
+  box-shadow: 0 0 12px 2px rgba(125, 255, 196, 0.5);
+}
+
+/* 04 Wirtualna Polska: amber planet with craters */
+.s-wp {
+  background: radial-gradient(
+    circle at 32% 28%,
+    #ffeab8,
+    #f0a43a 45%,
+    #5a2608 100%
+  );
+  box-shadow:
+    0 0 70px rgba(240, 164, 58, 0.5),
+    inset -20px -24px 42px rgba(25, 5, 0, 0.6);
+}
+
+.s-wp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 28% 62%,
+      rgba(70, 25, 0, 0.5) 0 9%,
+      transparent 10%
+    ),
+    radial-gradient(
+      circle at 63% 33%,
+      rgba(70, 25, 0, 0.45) 0 13%,
+      transparent 14%
+    ),
+    radial-gradient(
+      circle at 72% 72%,
+      rgba(70, 25, 0, 0.5) 0 6%,
+      transparent 7%
+    ),
+    radial-gradient(
+      circle at 24% 28%,
+      rgba(70, 25, 0, 0.42) 0 5%,
+      transparent 6%
+    ),
+    radial-gradient(
+      circle at 48% 82%,
+      rgba(70, 25, 0, 0.4) 0 4%,
+      transparent 5%
+    );
+}
+
+/* 05 This portfolio: pink planet with a swirl and a glint */
+.s-port {
+  background: radial-gradient(
+    circle at 32% 28%,
+    #ffd6f2,
+    #d654b4 45%,
+    #470d3a 100%
+  );
+  box-shadow:
+    0 0 70px rgba(214, 84, 180, 0.45),
+    inset -20px -24px 42px rgba(25, 0, 20, 0.6);
+}
+
+.s-port::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 30deg at 50% 50%,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0) 22%,
+    rgba(60, 0, 50, 0.3) 48%,
+    rgba(255, 255, 255, 0.14) 70%,
+    rgba(255, 255, 255, 0) 90%,
+    rgba(255, 255, 255, 0.22)
+  );
+}
+
+.s-port::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  top: 10%;
+  width: 28%;
+  height: 20%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35),
+    transparent 70%
+  );
+  filter: blur(2px);
+}
+
+/* Info card */
+.info {
+  padding: 22px 22px 20px;
+}
+
+.planetKicker {
+  font-size: 12px;
+}
+
+.info h3 {
+  margin: 6px 0 12px;
+  font-size: 26px;
+}
+
+.info p {
+  margin: 0 0 14px;
+  color: #e2e5ff;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.shot {
+  margin: 0 0 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(160, 170, 255, 0.22);
+  background: #080a1e;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease;
+}
+
+.planet:hover .shot {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.7);
+}
+
+.shotBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 11px;
+  color: #8f96c4;
+}
+
+.shotBar i {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #555b8a;
+}
+
+.shotBar span {
+  margin-left: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shotImg {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Backstage placeholder banner until a real screenshot exists. */
+.shotBody {
+  position: relative;
+  height: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(160deg, #0b2d2c, #1a0f3d);
+}
+
+.shotEvent {
+  font-size: 18px;
+  color: #7dffc4;
+}
+
+.shotTagline {
+  font-size: 12px;
+  color: #a9b0dc;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 170, 255, 0.34);
+  color: #eef0ff;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.acts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.details {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 16px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 170, 255, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.details:hover {
+  border-color: var(--accent2);
+  background: rgba(61, 224, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  min-height: 44px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Narrow desktop: keep a 400px corridor in the middle for the sun, its glow
+   and the toast (320px) by narrowing the columns instead of overlapping. */
+@media (max-width: 1100px) {
+  .col {
+    width: min(320px, calc(50% - 200px));
+  }
+
+  .planet {
+    width: 100%;
+  }
+}
+
+/* Below ~1000px two columns plus the corridor no longer fit, so the galaxy
+   switches to the single-column (mobile) layout earlier than the nav does. */
+@media (max-width: 1000px) {
+  .stage {
+    min-height: 0;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .orbit {
+    display: none;
+  }
+
+  /* Columns dissolve so planets follow their number (order: 1–5). */
+  .col {
+    display: contents;
+  }
+
+  .planet {
+    width: auto;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit,
+  .sphere,
+  .moonOrbit {
+    animation: none;
+  }
+}

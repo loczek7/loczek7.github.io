@@ -4,9 +4,22 @@
   gap: 16px;
 }
 
+.center {
+  align-items: center;
+  text-align: center;
+}
+
 .title {
   margin: 0;
   font-size: 44px;
   line-height: 1.15;
   color: #ffffff;
+}
+
+.sub {
+  margin: 0;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #b5bbe6;
 }

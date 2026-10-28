@@ -31,6 +31,10 @@ export function DownloadIcon({ size = 18 }: IconProps) {
   return <Icon size={size} d="M12 4v11M7 11l5 5 5-5M5 20h14" />;
 }
 
+export function PlusIcon({ size = 18 }: IconProps) {
+  return <Icon size={size} d="M12 5v14M5 12h14" />;
+}
+
 export function ArrowRightIcon({ size = 18 }: IconProps) {
   return <Icon size={size} d="M5 12h14M13 6l6 6-6 6" />;
 }
