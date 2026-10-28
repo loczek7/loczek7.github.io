@@ -1,17 +1,21 @@
 import type { Messages } from "@/lib/i18n";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ArrowUpIcon } from "@/components/ui/icons";
+import { BlackHole3D } from "@/components/three/BlackHole3D";
 import styles from "./BlackHole.module.css";
 
 type BlackHoleProps = {
   t: Messages["blackhole"];
 };
 
-// End-of-page black hole. SVG ported 1:1 from the prototype (decorative).
+// End-of-page black hole (decorative). Ray-traced WebGL version on top
+// (BlackHole3D); the SVG ported from the prototype is the fallback and is
+// hidden once the 3D scene has rendered.
 export function BlackHole({ t }: BlackHoleProps) {
   return (
     <section className={styles.bh} aria-label={t.aria}>
-      <div className={styles.stage} aria-hidden="true">
+      {/* data-bh-stage: the 3D background fades out as this comes into view. */}
+      <div className={styles.stage} aria-hidden="true" data-bh-stage="">
         <svg
           className={styles.svg}
           viewBox="0 0 1200 460"
@@ -400,6 +404,7 @@ export function BlackHole({ t }: BlackHoleProps) {
             <path d="M 720 372 l 7 -2" />
           </g>
         </svg>
+        <BlackHole3D />
       </div>
       <div className={`reveal ${styles.text}`}>
         <span className="kicker">{t.kicker}</span>
