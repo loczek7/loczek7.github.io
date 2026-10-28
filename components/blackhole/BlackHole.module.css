@@ -1,21 +1,29 @@
+/* Full-width section (owner's request: the whole black hole visible and
+   scaled to the screen). The text below keeps the usual 1200px column. */
 .bh {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 24px 0;
+  padding: 40px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Height follows the screen: about half the width, but never taller than
+   most of the viewport. The 3D shader frames itself to this shape. */
 .stage {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  height: 460px;
+  height: clamp(340px, 52vw, 86vh);
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(#000 80%, transparent);
-  mask-image: linear-gradient(#000 80%, transparent);
+  /* Soft fade on all edges instead of a hard cut. */
+  -webkit-mask-image:
+    linear-gradient(transparent, #000 8%, #000 86%, transparent),
+    linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(transparent, #000 8%, #000 86%, transparent),
+    linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-composite: intersect;
 }
 
 .svg {
@@ -24,6 +32,11 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+/* BlackHole3D sets html[data-bh3d] after its first frame. */
+:global(html[data-bh3d]) .svg {
+  display: none;
 }
 
 .moon {
@@ -42,7 +55,9 @@
   align-items: center;
   text-align: center;
   gap: 16px;
-  padding-bottom: 56px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px 56px;
 }
 
 .title {

@@ -110,6 +110,17 @@
   animation: aur2 22s ease-in-out infinite alternate;
 }
 
+/* CSS planets and solar system: fallback for the WebGL scene, hidden once
+   Planets3D has rendered its first frame (it sets html[data-planets3d]). */
+.flat {
+  position: absolute;
+  inset: 0;
+}
+
+:global(html[data-planets3d]) .flat {
+  display: none;
+}
+
 /* Parallax layers (scroll movement is added with the scroll animations) */
 .par {
   position: absolute;
